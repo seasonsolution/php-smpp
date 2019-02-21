@@ -20,7 +20,7 @@
     },
     "autoload": {
         "psr-4": {
-            "seasonsolution\\php-smpp\\": "src/"
+            "seasonsolution\\phpsmpp\\": "src/"
         }
     },
     "license": "LGPL-2.1-only"
