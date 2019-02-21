@@ -1,11 +1,11 @@
 <?php 
-namespace seasonsolution;
+namespace seasonsolution\phpsmpp;
 
 /**
  * An extension of a SMS, with data embedded into the message part of the SMS.
  * @author hd@onlinecity.dk
  */
-class SmppDeliveryReceipt extends \seasonsolution\SmppSms
+class SmppDeliveryReceipt extends \seasonsolution\phpsmpp\SmppSms
 {
 	public $id;
 	public $sub;

@@ -1,5 +1,5 @@
 <?php
-namespace seasonsolution;
+namespace seasonsolution\phpsmpp;
 /**
  * Numerous constants for SMPP v3.4
  * Based on specification at: http://www.smsforum.net/SMPP_v3_4_Issue1_2.zip

@@ -1,7 +1,7 @@
 <?php
-namespace seasonsolution;
+namespace seasonsolution\phpsmpp;
 
-use seasonsolution\SocketTransportException;
+use seasonsolution\phpsmpp\SocketTransportException;
 
 if(!defined('MSG_DONTWAIT')) define('MSG_DONTWAIT', 0x40);
 

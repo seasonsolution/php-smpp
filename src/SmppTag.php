@@ -1,5 +1,5 @@
 <?php
-namespace seasonsolution;
+namespace seasonsolution\phpsmpp;
 
 /**
  * Primitive class to represent SMPP optional params, also know as TLV (Tag-Length-Value) params

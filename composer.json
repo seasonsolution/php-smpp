@@ -1,5 +1,5 @@
 {
-    "name": "seasonsolution/php-smpp",
+    "name": "seasonsolution/phpsmpp",
     "type": "library",
     "description": "PHPSMPP is a full-featured SMS creation, transfer and receive class for PHP",
     "authors": [

@@ -1,5 +1,5 @@
 <?php
-namespace seasonsolution;
+namespace seasonsolution\phpsmpp;
 
 #class SocketTransportException extends RuntimeException { }
 class SocketTransportException

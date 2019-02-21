@@ -1,5 +1,5 @@
 <?php
-namespace seasonsolution;
+namespace seasonsolution\phpsmpp;
 
 #class SmppException extends RuntimeException
 class SmppException 

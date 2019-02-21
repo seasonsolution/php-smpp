@@ -1,14 +1,14 @@
 <?php
-namespace seasonsolution;
+namespace seasonsolution\phpsmpp;
 
-use seasonsolution\SocketTransport;
-use seasonsolution\SmppException;
-use seasonsolution\SMPP;
-use seasonsolution\SmppPdu;
-use seasonsolution\SmppDeliveryReceipt;
-use seasonsolution\SmppSms;
-use seasonsolution\SmppAddress;
-use seasonsolution\SmppTag;
+use seasonsolution\phpsmpp\SocketTransport;
+use seasonsolution\phpsmpp\SmppException;
+use seasonsolution\phpsmpp\SMPP;
+use seasonsolution\phpsmpp\SmppPdu;
+use seasonsolution\phpsmpp\SmppDeliveryReceipt;
+use seasonsolution\phpsmpp\SmppSms;
+use seasonsolution\phpsmpp\SmppAddress;
+use seasonsolution\phpsmpp\SmppTag;
 #require_once dirname(__FILE__).DIRECTORY_SEPARATOR.'sockettransport.class.php';
 	
 /**

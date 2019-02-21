@@ -1,6 +1,6 @@
 <?php
 
-namespace seasonsolution;
+namespace seasonsolution\phpsmpp;
 
 
 /**

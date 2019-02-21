@@ -1,11 +1,11 @@
 <?php
-namespace seasonsolution;
+namespace seasonsolution\phpsmpp;
 
 /**
  * Primitive type to represent SMSes
  * @author hd@onlinecity.dk
  */
-class SmppSms extends \seasonsolution\SmppPdu
+class SmppSms extends \seasonsolution\phpsmpp\SmppPdu
 {
 	public $service_type;
 	public $source;

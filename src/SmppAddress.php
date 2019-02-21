@@ -1,5 +1,5 @@
 <?php
-namespace seasonsolution;
+namespace seasonsolution\phpsmpp;
 
 /**
  * Primitive class for encapsulating smpp addresses
