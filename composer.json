@@ -1,0 +1,27 @@
+{
+    "name": "seasonsolution/php-smpp",
+    "type": "library",
+    "description": "PHPSMPP is a full-featured SMS creation, transfer and receive class for PHP",
+    "authors": [
+        {
+            "name": "Hans Duedal",
+            "email": "hd@oc.dk",
+            "homepage": "http://oc.dk"
+        },
+        {
+            "name": "Development Team",
+            "email": "development@seasonsolution.eu"
+        }
+    ],
+    "require": {
+		"php": ">=5.3.3",
+        "ext-sockets": "*",
+        "ext-mbstring": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "seasonsolution\\php-smpp\\": "src/"
+        }
+    },
+    "license": "LGPL-2.1-only"
+}
