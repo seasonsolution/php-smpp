@@ -51,10 +51,10 @@ To send a SMS you can do:
 <?php
 // Import PHPSMPP classes into the global namespace
 // These must be at the top of your script, not inside a function
-use seasonsolution\smpplib;
-use seasonsolution\smppclient;
-use seasonsolution\gsmencoder;
-use seasonsolution\sockettransport;
+use seasonsolution\phpsmpp\smpplib;
+use seasonsolution\phpsmpp\smppclient;
+use seasonsolution\phpsmpp\gsmencoder;
+use seasonsolution\phpsmpp\sockettransport;
 
 //Load Composer's autoloader
 require 'vendor/autoload.php';
@@ -85,9 +85,9 @@ To receive a SMS (or delivery receipt):
 <?php
 // Import PHPSMPP classes into the global namespace
 // These must be at the top of your script, not inside a function
-use seasonsolution\smpplib;
-use seasonsolution\smppclient;
-use seasonsolution\sockettransport;
+use seasonsolution\phpsmpp\smpplib;
+use seasonsolution\phpsmpp\smppclient;
+use seasonsolution\phpsmpp\sockettransport;
 
 //Load Composer's autoloader
 require 'vendor/autoload.php';
