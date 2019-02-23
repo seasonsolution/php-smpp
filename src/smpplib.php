@@ -98,7 +98,7 @@ class smpplib
      *
      * SMS creation, transport class for PHP.
      *
-     * @return bool
+     * @return mixed
      */
     public function send()
     {
@@ -129,13 +129,13 @@ class smpplib
         $to = new SmppAddress($this -> numberTo,SMPP::TON_INTERNATIONAL,SMPP::NPI_E164);
 
         // Send
-        $smpp->sendSMS($from,$to,$encodedMessage,$tags);
+        $confirmSMS = $smpp->sendSMS($from,$to,$encodedMessage,$tags);
 
         // Close connection
         $smpp->close();
         
         // return
-        return true;
+        return $confirmSMS;
     }
     
     /**

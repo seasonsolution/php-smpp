@@ -7,8 +7,6 @@ This is a simplified SMPP client lib for sending or receiving smses through [SMP
 
 In addition to the client, this lib also contains an encoder for converting UTF-8 text to the GSM 03.38 encoding, and a socket wrapper. The socket wrapper provides connection pool, IPv6 and timeout monitoring features on top of PHP's socket extension.
 
-This lib has changed significantly from it's first release, which required namespaces and included some worker components. You'll find that release at [1.0.1-namespaced](https://github.com/onlinecity/php-smpp/tree/1.0.1-namespaced)
-
 This lib requires the [sockets](http://www.php.net/manual/en/book.sockets.php) PHP-extension, and is not supported on Windows. A [windows-compatible](https://github.com/onlinecity/php-smpp/tree/windows-compatible) version is also available.
 
 ## Class Features
@@ -62,10 +60,10 @@ require 'vendor/autoload.php';
 $smpp = new smpplib();
 
 // Server settings
-$smpp -> host = 'smpp.provider.com';    // Specify main SMPP server
+$smpp -> host = 'smsc-sim.smscarrier.com';    // Specify main SMPP server
 $smpp -> port = 2775;                   // SMPP port to connect to
-$smpp -> username = 'yourusername';     // SMPP username
-$smpp -> password = 'secret';           // SMPP password
+$smpp -> username = 'test';             // SMPP username
+$smpp -> password = 'test';            // SMPP password
 $smpp -> timeout = 10000;               // By default value, it is optional.
 $smpp -> debug = true;                  // Enable verbose debug output
 
@@ -76,7 +74,10 @@ $smpp -> numberTo = '+15417543010';
 // Content
 $smpp -> message = 'H€llo world, this is my sms message.';
 
-$smpp -> send();
+$smsConfirm = $smpp -> send();          // Code to confirmation sent sms
+
+// Print a SMS confirm sent
+echo $smsConfirm;
 ```
 
 To receive a SMS (or delivery receipt):
@@ -95,10 +96,10 @@ require 'vendor/autoload.php';
 $smpp = new smpplib();
 
 // Server settings
-$smpp -> host = 'smpp.provider.com';    // Specify main SMPP server
+$smpp -> host = 'smsc-sim.smscarrier.com';    // Specify main SMPP server
 $smpp -> port = 2775;                   // SMPP port to connect to
-$smpp -> username = 'yourusername';     // SMPP username
-$smpp -> password = 'secret';           // SMPP password
+$smpp -> username = 'test';             // SMPP username
+$smpp -> password = 'test';            // SMPP password
 $smpp -> timeoutReceive = 60000;               // By default value, it is optional.
 $smpp -> debug = true;                  // Enable verbose debug output
 
@@ -154,7 +155,7 @@ Most likely your SMPP provider doesn't support NULL-terminating the message fiel
 It typically means your SMPP provider rejected your login credentials, ie. your username or password.
 
 **Can I test the client library without a SMPP server?**  
-Many service providers can give you a demo account, but you can also use the [logica opensmpp simulator](http://opensmpp.logica.com/CommonPart/Introduction/Introduction.htm#simulator) (java) or [smsforum client test tool](http://www.smsforum.net/sctt_v1.0.Linux.tar.gz) (linux binary). In addition to a number of real-life SMPP servers this library is tested against these simulators.
+SMSCarrier has made available an online service to test the sending of SMS. Use this service to test on your application, see on [SMSCarrier](https://smscarrier.com/smsc-simulator/).
 
 **I have an issue that not mentioned here, what do I do?**  
 Please obtain full debug information, and open an issue here on github. Make sure not to include the Send PDU hex-codes of the BindTransmitter call, since it will contain your username and password. Other hex-output is fine, and greatly appeciated. Any PHP Warnings or Notices could also be important. Please include information about what SMPP server you are connecting to, and any specifics.
